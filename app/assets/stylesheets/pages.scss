@@ -1,0 +1,33 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  background: url("https://cdn.fodors.com/wp-content/uploads/2017/07/Surreal-Landscapes-Mono-Lake-1-1.jpg") no-repeat center center;
+  background-size: cover;
+  height: 700px;
+  width: 100vw;
+}
+.main_container {
+  position: relative;
+  padding-top: 20%;
+  margin-left: 70%;
+}
+.secondary_main {
+  background: url("https://www.jetairways.com/Images/ancillary/Explore-the-worlds.jpg"), no-repeat center center;
+  background-size:cover;
+  height: 500px;
+}
+.secondary_subheading {
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.menu-button {
+  width: 24px;
+}
+//SLIDING NAV BAR
