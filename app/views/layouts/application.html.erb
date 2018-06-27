@@ -17,11 +17,11 @@
 
 <body>
 <%= yield %>
+<!-- Include jQuery -->
+<script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+<!-- Include the Sidr JS -->
+<script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-     <!-- Include jQuery -->
-    <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
-    <!-- Include the Sidr JS -->
-    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
 </body>
 </html>
