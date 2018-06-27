@@ -72,3 +72,19 @@
   padding-top: 20%;
   text-align: center;
 }
+//THANKS PAGE
+.thanks-banner {
+  background: url("https://i.imgur.com/H9HlqjA.jpg") no-repeat center center;
+  background-size: cover;
+  height: 700px;
+  width: 100vw;
+  position: static;
+
+  h1 {
+    color: orange;
+  }
+  .thanks-container {
+    padding-top: 10%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,20 @@
+<div class = "signup-banner">
+  <div class = "signup-container">
+    <h1>Get the latest updates from Stories</h1>
+    <%= form_for(@signup) do |s| %>
+    <div class = "field">
+      <%= s.label :firstname %> <br>
+      <%= s.text_field :firstname %>
+    </div>
+    <div class = "field">
+      <%= s.label :email %> <br>
+      <%= s.text_field :email %>
+    </div>
+    <div class = "submit">
+      <br>
+      <%= s.submit "Sign Up" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+// Place all the styles related to the Signups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: Abel;
+}
+.signup-banner {
+  background: url("http://s1.picswalls.com/wallpapers/2014/08/08/awesome-scottish-landscape-wallpaper_015750372_152.jpg") no-repeat center center;
+  background-size: cover;
+  height: 700px;
+  width: 100vw;
+
+  h1 {
+    color: white;
+  }
+}
+
+.signup-container {
+  padding-top: 20%;
+  text-align: center;
+}
