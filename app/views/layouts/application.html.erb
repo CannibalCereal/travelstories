@@ -5,7 +5,7 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 
   <!-- Your other stuff  (you can have problems if you don't add minimum scale in the viewport) -->
@@ -21,19 +21,26 @@
 <body>
   <a id="simple-menu" href="#sidr"><img class = "menu-button"
     src = "https://s3.amazonaws.com/codecademy-content/projects/z2d/stories/menu-black.svg"/></a>
-  <div id="sidr">
-    <ul>
-      <li><%= link_to "Home", root_path, data: {turbolinks: 'false'} %></li>
-      <li><%= link_to "About", about_path, data: {turbolinks: 'false'} %></li>
-      <li><%= link_to "Contact", '/signups/new', data: {turbolinks: 'false'} %></li>
-    </ul>
-  </div>
+    <div id="sidr">
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", '/signups/new' %></li>
+        <% if current_user %>
+        <li style = "margin-left: 5%"><%= current_user.email %></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <% else %>
+        <li><%= link_to "Login", '/login' %></a></li>
+        <li><%= link_to "Signup", '/signups/new' %></a></li>
+        <% end %>
+      </ul>
+    </div>
 
 
-  <%= yield %>
-  <div class = "footer">
-    <p>Joshua Cho</p>
-  </div>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</body>
-</html>
+    <%= yield %>
+    <div class = "footer">
+      <p>Joshua Cho</p>
+    </div>
+    <%= javascript_include_tag 'application' %>
+  </body>
+  </html>

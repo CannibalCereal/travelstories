@@ -5,15 +5,17 @@ class SignupsController < ApplicationController
   def create
     @signup = Signup.new(signup_params)
     if @signup.save
-      redirect_to '/thanks'
+      session[:signup_id] = @signup.id
+      redirect_to root_path
     else
-      render 'new'
+      flash[:notice] = "Could not create user. Please try again."
+      redirect_to '/signups/new'
     end
   end
 
   private
   def signup_params
-    params.require(:signup).permit(:firstname, :email)
+    params.require(:signup).permit(:firstname, :email, :password)
   end
 
 end

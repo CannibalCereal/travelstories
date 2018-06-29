@@ -3,6 +3,7 @@ class CreateSignups < ActiveRecord::Migration[5.2]
     create_table :signups do |t|
       t.text :firstname
       t.text :email
+      t.string :password_digest
       t.timestamps
     end
   end
