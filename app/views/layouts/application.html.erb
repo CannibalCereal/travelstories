@@ -28,10 +28,13 @@
         <li><%= link_to "Contact", '/signups/new' %></li>
         <% if current_user %>
         <li style = "margin-left: 5%"><%= current_user.email %></li>
+          <% if current_user.vip? %>
+          <li><%= link_to "VIP Page", '/vip' %></li>
+          <% end %>
         <li><%= link_to "Log out", logout_path, method: "delete" %></li>
         <% else %>
-        <li><%= link_to "Login", '/login' %></a></li>
-        <li><%= link_to "Signup", '/signups/new' %></a></li>
+        <li><%= link_to "Login", '/login' %></li>
+        <li><%= link_to "Signup", '/signups/new' %></li>
         <% end %>
       </ul>
     </div>

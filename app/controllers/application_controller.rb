@@ -4,10 +4,16 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= Signup.find(session[:signup_id]) if session[:signup_id]
   end
+
   def require_user
     unless current_user
       flash[:notice] = "This page is for VIPs only."
       redirect_to '/login'
     end
   end
+
+  def require_vip
+    redirect_to '/' unless current_user.vip?
+  end
+
 end
